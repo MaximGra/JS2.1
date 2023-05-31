@@ -1,9 +1,9 @@
 const p = document.getElementById('timer')
 
-setInterval(() =>{
-    if (p.textContent >= 1){
-        p.textContent = Number(p.textContent) - 1;
-    } else if(p.textContent = 1){
-        alert('Вы победили в конкурсе');
-    }
+let pId = setInterval (() => {
+    p.textContent = Number(p.textContent) - 1
 }, 1000)
+
+setTimeout(() => { 
+    clearInterval(pId); alert('Вы победили в конкурсе!'); 
+}, Number(p.textContent) * 1000);
